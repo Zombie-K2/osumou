@@ -1,0 +1,236 @@
+body{
+  background: wheat;
+  margin: 0;
+  font-family: 游明朝, Tahoma, sans-serif;
+}
+
+header {
+  padding: 32px 16px; 
+  display: flex;
+  background:center/cover url("../osumou-flowers/header_flower.png");
+  font-size: 18px;
+}
+
+header img{
+  margin:0;
+  font-size:0;
+  line-height: 64px;
+}
+
+.sp-menu{
+  margin-left: auto;
+}
+
+.sp-menu #open{
+  font-size:32px;
+  line-height: 64px;
+  cursor: pointer;
+}
+
+.sp-menu #open.hide{
+  display: none;
+}
+
+
+/* ここはハンバーガーメニュー */
+main{
+  padding:0 ;
+}
+
+.overlay{
+  position: fixed;
+  top:0;
+  bottom:0;
+  right: 0;
+  left:0;
+  background: rgba(76, 208, 212, 0.95);
+  text-align: center;
+  padding: 64px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .6s;
+
+}
+
+.overlay.show{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay #close{
+  position: absolute;
+  top:16px;
+  right: 16px;
+  font-size:32px;
+  cursor:pointer;
+}
+
+.overlay ul{
+  list-style-type: none;
+  margin: 0;
+  padding:0;
+}
+
+.overlay li{
+  margin-top:24px;
+  opacity:0;
+  transform:translateY(16px);
+  transition:opacity .3s,transform.3s;
+}
+
+.overlay.show li{
+  opacity: 1;
+  transform:none;
+}
+
+.overlay.show li:nth-child(1){
+  transition-delay:.1s;
+}
+
+.overlay.show li:nth-child(2){
+  transition-delay:.2s;
+}
+
+.overlay.show li:nth-child(3){
+  transition-delay:.3s;
+}
+
+.pc-menu{
+  display: none;
+}
+
+header img{
+    max-width: 800px;
+    min-width: 200px;
+    height: auto;
+    align-items: center;
+  }
+
+
+.features > h1 {
+    text-align: center;
+    margin: 0;
+    padding:80px;
+    font-weight: normal; 
+    background: rgb(239, 248, 117);
+    color: royalblue;
+    font-size: 32px;
+  }
+
+
+
+
+  
+.features section {
+    text-align: center;
+    margin: 0;
+    padding: 64px;
+  }
+  
+.features img {
+    width: 300px;
+    height: 200px;
+    border-radius: 10%;
+    
+  }
+  
+  .info > h1{
+    text-decoration: underline 4px tomato;
+
+  }
+
+  #about-us,#flowers,#access{
+    text-align: center;
+    margin: 16px,0;
+  }
+  
+
+@media (min-width:600px) {
+  
+
+  .pc-menu{
+    display: block;
+    margin-left:  50px;
+   
+  }
+
+  .pc-menu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0,;
+    display: flex; 
+  }
+
+  .pc-menu a{
+    display: block;
+    width: 100px;
+    line-height:64px;
+    text-align:center;
+  }
+
+  .pc-menu a:hover{
+    background: #a0f594;
+    border-radius: 70%;
+    padding: 4px;
+    transition-duration: .3s;
+    transition-delay: .1s;
+  }
+
+  .sp-menu{
+    display:none;
+  }
+  
+
+  
+}
+
+a {
+  text-decoration:none; 
+}
+
+.btn{
+  display: inline-block;
+  padding: 10px 30px;
+  text-decoration: none;
+  background: rgb(243, 239, 17);/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 30px;
+  margin-top: 15px;
+  font-size: 25px;
+}
+
+.btn:hover{
+  background:rgb(214, 206, 58);
+}
+
+.btn--radius{
+  border-radius: 100vh;
+}
+
+.us{
+  text-align: center;
+}
+
+
+
+.flowers{
+  text-align: center;
+}
+
+.pic > h2{
+  color: tomato
+}
+
+
+.shop{
+  text-align: center;
+}
+
+footer{
+  padding: 64px 0;
+  text-align: center;
+  background: black;
+  color: white;
+  
+}
